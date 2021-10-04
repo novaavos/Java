@@ -1,4 +1,4 @@
-import java.util.Arrays;
+
 
 import javax.swing.JOptionPane;
 
@@ -6,19 +6,33 @@ public class exercicio02 {
 
 	public static void main(String[] args) {
 		
-		float[] numero;
-		numero = new float[3];
+		float[] n;
+		n = new float[3];
 	
 		
 		for(int i = 0; i < 3; i++) {
-			numero[i] = Integer.parseInt(JOptionPane.showInputDialog("Digite o "+(i+1)+"º número: "));
+			n[i] = Integer.parseInt(JOptionPane.showInputDialog("Digite o "+(i+1)+"º número: "));
 		}
 		
-		Arrays.sort(numero);
-		
-		System.out.println("O maior número é: "+Arrays.toString(numero));
+		if(n[0] <= n[1] && n[1] <= n[2]) {
+			JOptionPane.showMessageDialog(null, "Em ordem: "+ n[0] + " "+ n[1] + " "+ n[2] + ".");
+		}
+		else if(n[0] <= n[2] && n[2] <= n[1]) {
+			JOptionPane.showMessageDialog(null, "Em ordem: "+ n[0] + " "+ n[2] + " "+ n[1] + ".");
+		}
+		else if(n[1] <= n[0] && n[0] <= n[2]) {
+			JOptionPane.showMessageDialog(null, "Em ordem: "+ n[1] + " "+ n[0] + " "+ n[2] + ".");
+		}
+		else if(n[1] <= n[2] && n[2] <= n[0]) {
+			JOptionPane.showMessageDialog(null, "Em ordem: "+ n[1] + " "+ n[2] + " "+ n[0] + ".");
+		}
+		else if(n[2] <= n[0] && n[0] <= n[1]) {
+			JOptionPane.showMessageDialog(null, "Em ordem: "+ n[2] + " "+ n[0] + " "+ n[1] + ".");
+		}
+		else if(n[2] <= n[1] && n[1] <= n[0]) {
+			JOptionPane.showMessageDialog(null, "Em ordem: "+ n[2] + " "+ n[1] + " "+ n[0] + ".");
+		}
 		System.exit(0);
-		
 	}
 	
 }
