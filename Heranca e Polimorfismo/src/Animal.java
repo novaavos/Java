@@ -26,18 +26,7 @@ public class Animal {
 		this.idade = idade;
 	}
 	public String som() {
-		if(this.tipo == "Cachorro") {
-			return "*latido*";
-		} 
-		else if(this.tipo == "Cavalo") {
-			return "*relincho*";
-		}
-		else if(this.tipo == "Preguiça") {
-			return "Ta...tudo...na...mais pura...e...linda...paz";
-		}
-		else {
-			return "nulo";
-		}
+		return "";
 	}
 	
 	
